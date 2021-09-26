@@ -38,9 +38,11 @@ app.use("*", cors( function(req, callback){
 
 //app.options("http://localhost:3000", cors())
 
-//configuring middleware needed for authentication
+//configuring middleware needed for bodyParser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+//add static page to app
 app.use(express.static("public"));
 
 
